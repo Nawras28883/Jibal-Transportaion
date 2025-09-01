@@ -1,0 +1,508 @@
+/* تحسين التصميم ليتوافق مع Bootstrap ويظهر البيانات بشكل واضح واحترافي */
+body {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+.container, .content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+    padding: 18px 10px;
+    margin: 18px auto;
+    max-width: 100vw;
+}
+
+.card, .card-body {
+    padding: 8px 4px !important;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #ff6f61;
+    font-family: 'Cairo', 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+input, select, textarea {
+    color: #111 !important;
+    border: 2px solid #bdbdbd !important;
+}
+
+/* تحسين موحد لجميع حقول النماذج */
+input.form-control, select.form-select, textarea.form-control {
+    background-color: #f3f3f3 !important;
+    color: #222 !important;
+    border: 2px solid #1976d2 !important;
+    font-weight: bold;
+    border-radius: 12px !important;
+    font-size: 1.08rem !important;
+    box-shadow: 0 2px 8px rgba(54, 209, 196, 0.07);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+input.form-control:focus, select.form-select:focus, textarea.form-control:focus {
+    background-color: #fff !important;
+    border-color: #2196F3 !important;
+    box-shadow: 0 0 0 3px #bbdefb;
+}
+
+button, input[type="submit"] {
+    background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(91, 134, 229, 0.15);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: linear-gradient(90deg, #5b86e5 0%, #36d1c4 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(54, 209, 196, 0.18);
+}
+
+.btn-primary, button.btn-primary, input[type="submit"].btn-primary {
+    background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(91, 134, 229, 0.15);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-primary:hover, button.btn-primary:hover, input[type="submit"].btn-primary:hover {
+    background: linear-gradient(90deg, #5b86e5 0%, #36d1c4 100%) !important;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(54, 209, 196, 0.18);
+}
+
+.btn-secondary, button.btn-secondary, input[type="submit"].btn-secondary {
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255, 204, 51, 0.13);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-secondary:hover, button.btn-secondary:hover, input[type="submit"].btn-secondary:hover {
+    background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%) !important;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(255, 204, 51, 0.18);
+}
+
+.btn-danger, button.btn-danger, input[type="submit"].btn-danger {
+    background: linear-gradient(90deg, #ff5858 0%, #ff7b7b 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255, 88, 88, 0.13);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-danger:hover, button.btn-danger:hover, input[type="submit"].btn-danger:hover {
+    background: linear-gradient(90deg, #ff7b7b 0%, #ff5858 100%) !important;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(255, 88, 88, 0.18);
+}
+
+.btn-warning, button.btn-warning, input[type="submit"].btn-warning {
+    background: linear-gradient(90deg, #ffb347 0%, #ff9800 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.13);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-warning:hover, button.btn-warning:hover, input[type="submit"].btn-warning:hover {
+    background: linear-gradient(90deg, #ff9800 0%, #ffb347 100%) !important;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.18);
+}
+
+.btn-info, button.btn-info, input[type="submit"].btn-info {
+    background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(91, 134, 229, 0.13);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-info:hover, button.btn-info:hover, input[type="submit"].btn-info:hover {
+    background: linear-gradient(90deg, #5b86e5 0%, #36d1c4 100%) !important;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(91, 134, 229, 0.18);
+}
+
+.btn-info, button.btn-info, input[type="submit"].btn-info,
+.btn-warning, button.btn-warning, input[type="submit"].btn-warning,
+.btn-danger, button.btn-danger, input[type="submit"].btn-danger {
+    border-radius: 20px !important;
+}
+
+.form-label, label {
+    font-size: 0.95rem;
+    margin-bottom: 1px;
+}
+
+label {
+    color: #111 !important;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+/* تحسين الجداول */
+table {
+    width: 100% !important;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(31, 38, 135, 0.07);
+    margin-bottom: 0.5rem;
+    direction: rtl;
+}
+
+thead {
+    background: linear-gradient(90deg, #ff6f61 0%, #f6d365 100%);
+    color: #fff;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background: #fff7f0;
+}
+
+td, th {
+    padding: 6px 6px !important;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 0.95rem;
+}
+
+/* تصميم عصري لرأس لوحة التحكم والقوائم المنسدلة */
+.navbar {
+    background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%) !important;
+    box-shadow: 0 4px 18px 0 rgba(91, 134, 229, 0.10);
+    border-radius: 0 0 24px 24px;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #0550e7 !important;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(54, 209, 196, 0.10);
+}
+
+.navbar-nav .nav-link {
+    color: #161515 !important;
+    font-weight: bold;
+    font-size: 1.08rem;
+    transition: color 0.2s;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: #ffe082 !important;
+}
+
+/* إظهار القائمة المنسدلة عند المرور بالماوس على عنصر القائمة */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0.5rem;
+    animation: dropdownFadeIn 0.6s;
+}
+
+/* معالجة اختفاء القوائم المنسدلة بسرعة عند المرور */
+.navbar-nav .dropdown:hover > .dropdown-menu,
+.navbar-nav .dropdown-menu:hover,
+.navbar-nav .dropdown-menu:focus-within {
+    display: block;
+    pointer-events: auto;
+    animation: dropdownFadeIn 0.6s;
+}
+
+/* منع اختفاء القائمة عند تحريك المؤشر بين الزر والقائمة */
+.navbar-nav .dropdown-menu {
+    pointer-events: auto;
+}
+
+/* إصلاح إغلاق القائمة عند الخروج بالماوس */
+.navbar-nav .dropdown-menu {
+    background: #fff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 16px rgba(54, 209, 196, 0.13), 0 1.5px 0 #e3f2fd inset;
+    border: 2px solid #1976d2 !important;
+    margin-top: 0.7rem;
+    animation: dropdownFadeIn 0.6s;
+    padding: 0.5rem 0.2rem;
+    box-shadow: 0 4px 16px rgba(54, 209, 196, 0.13), 0 1.5px 0 #e3f2fd inset;
+}
+
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu .dropdown-item {
+    color: #222 !important;
+    font-weight: bold !important;
+    border-radius: 0;
+    margin: 0;
+    padding: 10px 18px;
+    background: transparent;
+    transition: background 0.18s, color 0.18s;
+    border-bottom: 1px solid #b0bec5 !important;
+    box-shadow: none !important;
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown-menu .dropdown-item:last-child {
+    border-bottom: none !important;
+}
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
+    background: #e3f2fd !important; /* تظليل أزرق سماوي فقط بدون مؤثرات */
+    color: #222 !important;
+    box-shadow: none;
+}
+
+.dropdown-menu .dropdown-item:not(:last-child) {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.dropdown-menu .dropdown-divider {
+    height: 1px;
+    margin: 0.2rem 0;
+    overflow: hidden;
+    background-color: #b0bec5;
+    opacity: 1;
+    border: none;
+}
+
+::-webkit-input-placeholder { color: #ffb199; }
+::-moz-placeholder { color: #ffb199; }
+:-ms-input-placeholder { color: #ffb199; }
+::placeholder { color: #ffb199; }
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+/* تنسيقات التنبيهات المنبثقة (Toast/Alert) */
+#toast-container {
+    position: fixed;
+    top: 36px;
+    right: 36px;
+    z-index: 1050;
+    width: 420px;
+    max-width: 98vw;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: flex-end;
+}
+.toast-alert, .alert-popup {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-width: 340px;
+    max-width: 100%;
+    background: linear-gradient(120deg, #fff 80%, #f0f7fa 100%);
+    color: #222;
+    border-radius: 28px;
+    box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.22), 0 2px 0 #e3f2fd inset;
+    padding: 30px 56px 30px 30px;
+    font-size: 1.32rem;
+    font-family: inherit;
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50px) scale(0.97) rotate(-2deg);
+    transition: opacity 0.6s cubic-bezier(.4,0,.2,1), transform 0.6s cubic-bezier(.4,0,.2,1), box-shadow 0.3s;
+    box-sizing: border-box;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-left: 0;
+}
+.toast-alert.show, .alert-popup.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1) rotate(0);
+    box-shadow: 0 20px 64px 0 rgba(54, 209, 196, 0.22), 0 2px 0 #e3f2fd inset;
+}
+.toast-alert .toast-icon, .alert-popup .toast-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-left: 18px;
+    box-shadow: 0 2px 8px rgba(54, 209, 196, 0.10);
+    background: linear-gradient(135deg, #e3f2fd 60%, #fff 100%);
+}
+.toast-alert.success .toast-icon {
+    background: linear-gradient(135deg, #36d1c4 60%, #e3f2fd 100%);
+    color: #fff;
+}
+.toast-alert.error .toast-icon {
+    background: linear-gradient(135deg, #ff5858 60%, #ffeaea 100%);
+    color: #fff;
+}
+.toast-alert.warning .toast-icon {
+    background: linear-gradient(135deg, #ffb347 60%, #fff6e3 100%);
+    color: #fff;
+}
+.toast-alert.info .toast-icon {
+    background: linear-gradient(135deg, #1976d2 60%, #e3f2fd 100%);
+    color: #fff;
+}
+.toast-alert .close-btn, .alert-popup .close-btn {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    background: #fff;
+    border: 2px solid #eee;
+    color: #888;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(31, 38, 135, 0.10);
+}
+.toast-alert .close-btn:hover, .alert-popup .close-btn:hover {
+    color: #ff5858;
+    border-color: #ff5858;
+    transform: scale(1.15) rotate(-10deg);
+    box-shadow: 0 4px 16px rgba(255, 88, 88, 0.13);
+}
+@media (max-width: 600px) {
+    #toast-container {
+        right: 4px;
+        left: 4px;
+        width: auto;
+        max-width: 100vw;
+        top: 10px;
+    }
+    .toast-alert, .alert-popup {
+        min-width: unset;
+        max-width: 100vw;
+        padding: 18px 18px 18px 38px;
+        font-size: 1.05rem;
+        border-radius: 16px;
+    }
+    .toast-alert .close-btn, .alert-popup .close-btn {
+        left: 8px;
+        top: 8px;
+        font-size: 1.1rem;
+        width: 28px;
+        height: 28px;
+    }
+    .toast-alert .toast-icon, .alert-popup .toast-icon {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        font-size: 1.2rem;
+        margin-left: 10px;
+    }
+}
+
+/* تحسين وضوح قائمة محافظة المصدر */
+select#source_governorate {
+    background-color: #f3f3f3 !important;
+    color: #222 !important;
+    border: 2px solid #1976d2 !important;
+    font-weight: bold;
+}
+select#source_governorate option {
+    background: #fff !important;
+    color: #222 !important;
+}
+
+/* أزرار عصرية إضافية */
+.modern-btn {
+    border-radius: 18px !important;
+    padding: 0.55rem 1.5rem !important;
+    font-size: 1.08rem !important;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 12px rgba(54, 209, 196, 0.10);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.modern-btn:active {
+    transform: scale(0.97);
+}
+
+/* ظل عصري للحاويات */
+.modern-shadow {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13), 0 1.5px 0 #e3f2fd inset !important;
+    border-radius: 22px !important;
+}
+
+/* فلاتر عصرية */
+.filter-bar {
+    background: #f8fafc !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 8px rgba(54, 209, 196, 0.07);
+    border: 1.5px solid #e3f2fd !important;
+}
+
+.modern-select {
+    border-radius: 12px !important;
+    min-width: 120px;
+    font-size: 1.01rem !important;
+}
+
+.modern-input {
+    border-radius: 12px !important;
+    min-width: 120px;
+    font-size: 1.01rem !important;
+}
+
+/* أزرار الإجراءات في الجدول */
+.btn-action {
+    margin-left: 4px;
+    margin-right: 4px;
+    min-width: 70px;
+    border-radius: 14px !important;
+    font-size: 0.97rem !important;
+    padding: 0.35rem 0.9rem !important;
+}
+
+@media (max-width: 600px) {
+    .modern-btn {
+        font-size: 0.98rem !important;
+        padding: 0.45rem 1rem !important;
+    }
+    .filter-bar {
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding: 8px 4px !important;
+    }
+}
